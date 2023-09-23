@@ -1,6 +1,13 @@
-// index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './app';
+import './index.css';
+import App from './App';
+import AliceCarousel from 'react-alice-carousel';
+import 'react-alice-carousel/lib/alice-carousel.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

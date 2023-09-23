@@ -1,12 +1,25 @@
-// app.js
-import React from 'react';
+import React, { useState } from 'react';
+import './index.css';
+import Modal from './Modal';
 
-const App = () => {
+
+function App() {
+  const [openModal, setOpenModal] = useState(false);
+
+
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-      <h1>Hello!</h1>
-    </div>
+    <div>
+      
+      <button 
+      onClick={() => setOpenModal(true)} 
+      className='modalButton'>
+        Modal
+      </button>
+      <Modal 
+      open={openModal} 
+      onClose={() => setOpenModal(false)} />
+      </div>
   );
-};
+}
 
 export default App;
