@@ -1,12 +1,15 @@
-import Carousel from 'react-multi-carousel';
+import Carousel from "./carousel";
 import React from 'react';
 import propic from './profile.png';
 
-const images = [
-  'https://example.com/image1.jpg',
-  'https://example.com/image2.jpg',
-  'https://example.com/image3.jpg',
-];
+import image1 from "./01.png";
+import image2 from "./sample2.png";
+import image3 from "./sample3.png";
+import image4 from "./sample4.png";
+import image5 from "./sample1.png"
+
+
+const images = [image1, image2, image3, image4, image5];
 
 
 
@@ -39,8 +42,11 @@ const Modal = ({ open, onClose }) => {
 
           </div>
           <div class="modal_bodycontainer">
-          <div class="modal_body_left_div">Carousel Placement
+          <div class="modal_body_left_div">
           
+            
+            <Carousel images={images} />
+         
           </div>
           
           <div class="modal_body_right_div">

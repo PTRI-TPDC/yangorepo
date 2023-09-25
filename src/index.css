@@ -193,8 +193,87 @@
 .modal_body_left_div {
   width: 383px;
   height: 323px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
  
 }
+
+.carousel {
+  width: 75%;
+  height: 75%;
+  
+}
+
+.carousel-slides {
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  position: relative;
+  bottom: 0;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-controls button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.carousel-indicators {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: black;
+}
+
 
 .modal_body_right_div {
   width: 244px;
@@ -213,9 +292,7 @@
   align-items: center;
 }
 
-.profile {
 
-}
 
 .modal_body_right_div h5 {
   padding-left: 10px;
