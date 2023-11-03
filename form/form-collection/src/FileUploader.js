@@ -1,8 +1,11 @@
 import { useState, useRef } from "react";
 import TextField from './TextField';
 import LargerTextfield from './LargerTextfield';
+import Dropdown from './Dropdown';
+
 
 const FileUploader = () => {
+  const [selectedOption, setSelectedOption] = useState('Red');
   const [files, setFiles] = useState(null);
   const inputRef = useRef();
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -59,11 +62,20 @@ const FileUploader = () => {
             
             <h1>{currentFile.name}</h1>
             <div className="modal-field-container">
+            
                
-                    <TextField title="Designer" placeholder="Value" />
-                    <TextField title="Designer" placeholder="Value" />
-                    <TextField title="Designer" placeholder="Value" />
+                    <TextField title="Style Number" placeholder="Value" />
+                    <TextField title="Type" placeholder="Value" />
+                    
+                    <Dropdown
+                     title="Test"
+                      options={['Value1', 'Value2', 'Value3']}
+                      selectedOption={selectedOption}
+                      onChange={(option) => setSelectedOption(option)}
+                    />
+
             </div>
+            <br></br>
             <div className="modal-actions">
             <LargerTextfield title="Designer" placeholder="Value" />
                 </div>
@@ -83,7 +95,7 @@ const FileUploader = () => {
       >
         <h3>Drag Files Here</h3>
 
-        <input
+        <input 
           type="file"
           multiple
           onChange={(event) => setFiles(event.target.files)}

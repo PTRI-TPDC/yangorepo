@@ -34,9 +34,11 @@ const ResponsiveDiv = () => {
       <p> ATTACH PATTERN PIECES</p>
       </div>
       <div className="file-uploader-box">
+
        
         <FileUploader />
       </div>
+      <button className="main-button">Click Me!</button>
     </div>
   );
 };
